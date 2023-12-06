@@ -1,0 +1,110 @@
+/* client/src/components/VideoCall.css */
+.video-call-container {
+  position: relative;
+}
+
+.video-element {
+  border: 2px solid #333;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* client/src/components/VideoCall.css */
+.video-call-container {
+  position: relative;
+}
+
+.video-element {
+  margin: 20px; /* Add margins */
+  border: 2px solid #3498db; /* Add border styling */
+  border-radius: 8px;
+  width: calc(100% - 40px); /* Adjust width to consider margins */
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+/* client/src/components/VideoCall.css */
+.video-call-container {
+  position: relative;
+  height: 100vh; /* Set height to fill the entire viewport */
+}
+
+.video-element {
+  margin: 5vh 5vw; /* Add margins using viewport units */
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  width: calc(90% - 10vw); /* Adjust width to consider left and right margins */
+  height: calc(90% - 10vh); /* Adjust height to consider top and bottom margins */
+  max-width: 800px; /* Set a maximum width for larger screens */
+  max-height: 600px; /* Set a maximum height for larger screens */
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+

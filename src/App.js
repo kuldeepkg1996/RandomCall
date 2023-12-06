@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import io from 'socket.io-client';
+import { Container, Row, Col } from 'react-bootstrap';
+import VideoChat from './components/VideoChat';
+import Chat from './components/Chat';
+
+const socket = io('http://localhost:3001');
 
 function App() {
+  useEffect(() => {
+    return () => {
+      socket.disconnect();
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <h1>Video Chat App</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={12} md={6}>
+          <VideoChat socket={socket} />
+        </Col>
+        <Col xs={12} md={6}>
+          <Chat socket={socket} />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
